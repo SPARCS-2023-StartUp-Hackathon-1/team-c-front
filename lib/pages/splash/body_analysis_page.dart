@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:skeletal_diagnosis/pages/my_type_page.dart';
+import 'package:skeletal_diagnosis/body_analysis/my_type_page.dart';
 
 import '../../info.dart';
 
