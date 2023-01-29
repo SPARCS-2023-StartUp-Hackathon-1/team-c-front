@@ -28,7 +28,7 @@ class _CustomEnableButtonState extends State<CustomEnableButton> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(100),
             )),
-        child: Text("다음",style: TextStyle(fontSize:18,fontWeight: FontWeight.w600),),
+        child: Text("다음",style: TextStyle(fontWeight: FontWeight.w600),),
         onPressed: isEnabled ? () => onPressedFunction() : null,
 
 

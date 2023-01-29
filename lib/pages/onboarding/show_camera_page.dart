@@ -1,6 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:skeletal_diagnosis/cameramodel/open_camera.dart';
 import 'package:skeletal_diagnosis/info.dart';
+import 'package:http/http.dart' as http;
+import 'package:skeletal_diagnosis/pages/onboarding/foot_size.dart';
+import 'check_page.dart';
 
 class ShowCameraPage extends StatelessWidget {
 
@@ -52,8 +58,12 @@ class ShowCameraPage extends StatelessWidget {
                     width: 30,
                   ),
                   ElevatedButton(
-                    onPressed: () {
-                      // 다음 측면 사진으로 넘어감
+                    onPressed: () async {
+                      var url =
+                      var request = new http.MultipartRequest("POST",url) //GIVE ME URL PLZZZ
+                      request.files.add(await http.MultipartFile.fromPath('package',Get.arguments.path));
+                      var response = await request.send();
+                      Get.to(FootSize());
                     },
                     child: Text("사용하기", style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),),
                     style: ElevatedButton.styleFrom(

@@ -1,7 +1,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+
+import '../pages/onboarding/show_camera_page.dart';
 
 class OpenCamera extends StatefulWidget {
   const OpenCamera({Key? key}) : super(key: key);
@@ -17,7 +20,6 @@ class _OpenCameraState extends State<OpenCamera> {
   // 비동기 처리를 통해 카메라와 갤러리에서 이미지를 가져온다.
   Future getImage(ImageSource imageSource) async {
     final image = await picker.pickImage(source: imageSource);
-
     setState(() {
       _image = File(image!.path);
     });
@@ -36,9 +38,9 @@ class _OpenCameraState extends State<OpenCamera> {
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.width,
           child: Center(
-              child: _image == null
+              child: Null == Get.arguments
                   ? Text('No image selected.')
-                  : Image.file(File(_image!.path)))),
+                  : Image.file(File(Get.arguments.path)))),
     );
   }
 

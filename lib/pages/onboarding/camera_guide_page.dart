@@ -27,9 +27,28 @@ class CameraGuidePage extends StatelessWidget {
                   Text("정면과 측면사진을 찾아주세요",style: TextStyle(color: kblack, fontSize: 22, fontWeight: FontWeight.w600),),
                   SizedBox(height: 40),
                   Container(
-                    width: 188,
-                    height: 171,
-                    color: Colors.redAccent,
+                    color: Colors.grey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(125),
+                          child: Container(
+                            width: 60,
+                            height: 60,
+                            color: kpurple1,
+                            child: Icon(Icons.priority_high,color: kpurple1,),
+                          ),
+                        ),
+                        Text("촬영 전 확인",style: TextStyle(color:kblack, fontSize: 12, fontWeight: FontWeight.w600),),
+                        Row(children: [
+                          Text("체형이 드러나는 딱 붙는 못",style: TextStyle(color:kpurple3, fontSize: 14, fontWeight: FontWeight.w700)),
+                          Text("을 착용해주세요",style: TextStyle(color:kblack, fontSize: 14, fontWeight: FontWeight.w700)),
+                        ],
+                        ),
+                        Text("그래야 정확한 진단이 가능해요!",style: TextStyle(color:kblack, fontSize: 14,fontWeight: FontWeight.w700),),
+                      ],
+                    ),
                   ),
                   SizedBox(height: 30),
                   Text("촬영 전 확인",style: TextStyle(color:kgrey4, fontSize: 16, fontWeight: FontWeight.w500),),
