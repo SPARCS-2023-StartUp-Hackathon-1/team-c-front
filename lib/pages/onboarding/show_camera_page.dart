@@ -59,10 +59,10 @@ class ShowCameraPage extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () async {
-                      var url =
-                      var request = new http.MultipartRequest("POST",url) //GIVE ME URL PLZZZ
-                      request.files.add(await http.MultipartFile.fromPath('package',Get.arguments.path));
-                      var response = await request.send();
+                      // var url =
+                      // var request = new http.MultipartRequest("POST",url) //GIVE ME URL PLZZZ
+                      // request.files.add(await http.MultipartFile.fromPath('package',Get.arguments.path));
+                      // var response = await request.send();
                       Get.to(FootSize());
                     },
                     child: Text("사용하기", style: TextStyle(fontSize: 18,fontWeight: FontWeight.w600),),

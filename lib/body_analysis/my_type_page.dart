@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:skeletal_diagnosis/info.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:skeletal_diagnosis/pages/main_page/home_page.dart';
 import '../components/my_type_button.dart';
 import '../components/my_type_title.dart';
 import '../components/necklinebox.dart';
@@ -96,7 +98,9 @@ class MyTypePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+
+                    },
                   ),
                 ),
               ],

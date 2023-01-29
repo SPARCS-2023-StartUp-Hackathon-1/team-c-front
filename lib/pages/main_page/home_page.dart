@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:skeletal_diagnosis/info.dart';
+import 'package:skeletal_diagnosis/pages/main_page/my_shape.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -83,26 +85,46 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 30),
             SvgPicture.asset("assets/homepagecard.svg"),
             SizedBox(height: 50),
-            Stack(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(60),
+                 InkWell(
+                   onTap: (){
+                     Get.to(MyShape());
+                   },
+                   child: Container(
+                      width: 70,
+                      height: 70,
+                      child: Icon(Icons.pages),
+                      decoration: BoxDecoration(
+                        color : kpurple3,
+                        border: Border.all(color: kblack,style: BorderStyle.solid,width: 3),
+                        borderRadius: BorderRadius.circular(60),
+                      ),
+                    ),
+                 ),
+                InkWell(
+                  onTap: (){},
                   child: Container(
-                    width: 90,
-                    height: 90,
-                    child: Icon(Icons.pages),
+                    width: 70,
+                    height: 70,
                     decoration: BoxDecoration(
-                      color : kpurple3,
-                      border: Border.all(color: kblack,style: BorderStyle.solid),
+                      color: kblack,
+                      borderRadius: BorderRadius.circular(60),
                     ),
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    color: kblack,
-                    borderRadius: BorderRadius.circular(60),
+                InkWell(
+                  onTap: (){},
+                  child: Container(
+                    width: 70,
+                    height: 70,
+                    child: Icon(Icons.pages),
+                    decoration: BoxDecoration(
+                      color : kpurple3,
+                      border: Border.all(color: kblack,style: BorderStyle.solid,width: 3),
+                      borderRadius: BorderRadius.circular(60),
+                    ),
                   ),
                 ),
               ],
