@@ -99,7 +99,7 @@ class MyTypePage extends StatelessWidget {
                       ],
                     ),
                     onPressed: () {
-
+                      Get.to(HomePage());
                     },
                   ),
                 ),

@@ -23,7 +23,6 @@ class MyShape extends StatelessWidget {
             children: [
               InkWell(
                 onTap: (){
-                  Get.to(JacketPage());
                 },
                   child: Container(
                     width: 150,
